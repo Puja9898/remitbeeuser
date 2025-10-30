@@ -1,0 +1,28 @@
+:root {
+    --bg: #f7f9fc;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, Roboto, Arial, sans-serif;
+    background: var(--bg);
+}
+
+#root {
+    min-height: 100vh;
+}
+
+
+/* small responsive tweaks */
+
+@media (max-width: 600px) {
+    .MuiCard-root {
+        font-size: 0.95rem;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f6f8;
+}
