@@ -101,13 +101,23 @@ export default function App() {
           </select>
         </div>
 
-        {/* ✅ Content Display */}
+        {/* ✅ Centered No Records Found Message */}
         {loading ? (
           <div className="status">Loading users…</div>
         ) : error ? (
           <div className="status error">Error: {error}</div>
         ) : filtered.length === 0 ? (
-          <div className="status empty">No records found.</div>
+          <div
+            style={{
+              textAlign: "center",
+              marginTop: "50px",
+              fontStyle: "italic",
+              fontSize: "1.2rem",
+              color: "red", // 🔴 Changed color to red
+            }}
+          >
+            No records found
+          </div>
         ) : (
           <>
             <div className="grid">
@@ -121,7 +131,7 @@ export default function App() {
               ))}
             </div>
 
-            {/* ✅ Pagination */}
+            {/* ✅ Pagination (unchanged) */}
             <div className="pagination">
               <button
                 className="pg-btn"
